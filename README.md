@@ -6,7 +6,7 @@ A simple currency converter application that allows users to convert between dif
 
 As this is not a production-ready application, there are some trade-offs that were made:
 
-- the application does not have authN/authZ, rate-limiting, proper logging, monitoring, etc.
+- the application does not have authN/authZ, rate-limiting, proper logging, monitoring, healthchecks, CI/CD, Git hooks etc.
 - structure could be shifted to more of a DDD approach in a real-world product under active development
 
 ## Project Structure
