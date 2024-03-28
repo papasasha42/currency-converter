@@ -4,6 +4,8 @@ import * as request from 'supertest';
 import * as nock from 'nock';
 import { AppModule } from './../src/app.module';
 import { ConfigService } from '@nestjs/config';
+import { CacheService } from '../src/common/ports/cache-service.abstract';
+import { InMemoryCacheService } from '../src/cache/in-memory-cache.service';
 
 describe('/v1/currencies/convert (POST)', () => {
   let app: INestApplication;
@@ -11,7 +13,6 @@ describe('/v1/currencies/convert (POST)', () => {
   const configServiceMock = {
     get(key: string) {
       const config = {
-        CACHE_PROVIDER: 'memory',
         MONOBANK_API_URL: 'http://api.mock',
       };
       return config[key as keyof typeof config] || null;
@@ -36,6 +37,8 @@ describe('/v1/currencies/convert (POST)', () => {
     })
       .overrideProvider(ConfigService)
       .useValue(configServiceMock)
+      .overrideProvider(CacheService)
+      .useClass(InMemoryCacheService)
       .compile();
 
     app = moduleFixture.createNestApplication();

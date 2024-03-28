@@ -102,7 +102,6 @@ import {
           },
         };
       } catch (error) {
-        console.log(error);
         if (error instanceof HttpException) {
           this.logger.warn(
             `Failed to fetch exchange rates: ${error.message || error.cause}`,

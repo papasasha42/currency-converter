@@ -6,7 +6,6 @@ import { InMemoryCacheService } from './in-memory-cache.service';
 @Module({})
 export class CacheModule {
   static register(): DynamicModule {
-    console.log(process.env.CACHE_PROVIDER);
     const providers = [
       {
         provide: CacheService,
