@@ -8,6 +8,7 @@ As this is not a production-ready application, there are some trade-offs that we
 
 - the application does not have authN/authZ, rate-limiting, proper logging, monitoring, healthchecks, CI/CD, Git hooks etc.
 - structure could be shifted to more of a DDD approach in a real-world product under active development
+- currencies and money decimals are handled in the most simple way that may be not production-ready
 
 ## Project Structure
 
