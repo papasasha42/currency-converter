@@ -4,6 +4,7 @@ import {
     IsNumber,
     IsISO4217CurrencyCode,
     IsPositive,
+    Max,
   } from 'class-validator';
   
   export class CurrencyConvertDto {
@@ -20,6 +21,7 @@ import {
     @IsNotEmpty()
     @IsNumber()
     @IsPositive()
+    @Max(1_000_000)
     amount: number;
   }
   
