@@ -25,9 +25,22 @@ exchange-rate.provider.module.ts
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/papasasha42/currency-converter.git`
-2. Open the project directory: `cd currency-converter`
-3. Install the required dependencies: `npm install`
+1. Clone the repository:
+   
+   ```sh
+    git clone https://github.com/papasasha42/currency-converter.git
+   ```
+   
+3. Open the project directory:
+   
+   ```sh
+    cd currency-converter
+   ```
+   
+5. Install the required dependencies:
+   ```sh
+    npm install
+   ```
 
 ## Usage
 
