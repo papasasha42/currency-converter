@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "pwa-node",
+        "request": "launch",
+        "name": "Debug NestJS App",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder}/src/main.ts",
+        "preLaunchTask": "tsc: build - tsconfig.json",
+        "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": ["run", "start:debug"],
+        "console": "integratedTerminal"
+      }
+    ]
+  }
+  
